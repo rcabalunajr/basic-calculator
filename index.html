@@ -1,0 +1,60 @@
+<!--
+	Title: Basic Calculator
+	Author: Ruel O. Cabaluna Jr.
+	Section: MUST BSIT-4R3
+	Date: August 2, 2015
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Calculator</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-ng-controller="mainController">
+	<div class="calculator">
+		<form>
+			<div class="calculator-display">
+				<input type="text" class="calculator-display-input" id="output" readonly>
+			</div>
+			<div class="buttons">
+
+				<p class="buttonsRow">
+					<input type="button" class="calc-button calc-button-gray" value="CA" onclick="clearAll()">
+					<input type="button" class="calc-button" disabled>
+					<input type="button" class="calc-button calc-button-gray"value="CE" onclick="clearEntry()">	
+					<input type="button" class="calc-button calc-button-red calc-button-big" value="÷" onclick="buttonClick('/')">
+				</p>
+				<p class="buttonsRow">
+					<input type="button" class="calc-button" value="7" onclick="buttonClick(7)">
+					<input type="button" class="calc-button" value="8" onclick="buttonClick(8)">
+					<input type="button" class="calc-button" value="9" onclick="buttonClick(9)">
+					<input type="button" class="calc-button calc-button-red calc-button-big" value="x" onclick="buttonClick('*')">
+				</p>
+				<p class="buttonsRow">
+					<input type="button" class="calc-button" value="4" onclick="buttonClick(4)">	
+					<input type="button" class="calc-button" value="5" onclick="buttonClick(5)">	
+					<input type="button" class="calc-button" value="6" onclick="buttonClick(6)">
+					<input type="button" class="calc-button calc-button-red calc-button-big" value="-" onclick="buttonClick('-')">
+				</p>
+				<p class="buttonsRow">
+					<input type="button" class="calc-button" value="1" onclick="buttonClick(1)">
+					<input type="button" class="calc-button" value="2" onclick="buttonClick(2)">	
+					<input type="button" class="calc-button" value="3" onclick="buttonClick(3)">
+					<input type="button" class="calc-button calc-button-red calc-button-big" value="+" onclick="buttonClick('+')">	
+				</p>
+				<p class="buttonsRow">
+					<input type="button" class="calc-button" value="0" onclick="buttonClick(0)">
+					<input type="button" class="calc-button" disabled>
+					<input type="button" class="calc-button" value="." onclick="buttonClick('.')">
+					<input type="button" class="calc-button calc-button-yellow calc-button-big" value="=" onclick="calculate()">
+					
+				</p>
+			</div>	
+		</form>
+	</div>
+
+	<script src="assets/js/calculator.js"></script>
+</body>
+</html>
